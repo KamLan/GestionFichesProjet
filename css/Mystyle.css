@@ -1,0 +1,97 @@
+/*FONT FACE*/
+@font-face {
+    font-family: 'champagne et limousine';
+    src: url('../fonts/champagne/Champagne%20%26%20Limousines.ttf');
+}
+
+@font-face {
+    font-family: 'bebas neue';
+    src: url('../fonts/bebas/BebasNeue.otf');
+}
+
+/* GENERAL */
+
+
+
+
+/* NAVBAR */
+
+nav{
+  font-family: "bebas neue";
+}
+
+.navbar-brand i{
+  color: #FF4000;
+}
+
+
+/* BODY */
+
+body{
+  background-color: #D8D8D8;
+  font-size: 20px;
+  font-family: "champagne et limousine", "Comic Sans";
+  min-height: 100%;
+}
+
+.container{
+  margin-top: 4%;
+  width: 80%;
+  background-color: white;
+}
+
+body p{
+  font-size: 1.2em;
+}
+
+body h1{
+  color: #FF4000;
+  text-align: center;
+}
+
+body h2{
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.main-title strong{
+  font-size: 1.5em;
+  font-family: "bebas neue";
+}
+
+/*INDEX */
+
+
+/* MOBILE */
+
+@media (max-width:700px){
+  .container{
+    width: 100%;
+  }
+  .proXP button{
+    margin-top: 10%;
+    margin-left: 30%;
+  }
+  .cv a{
+    margin-left: 5%;
+  }
+  .interests{
+    margin-left: 5%;
+  }
+  .container form{
+    margin-left: 20%;
+  }
+}
+
+
+/* SECURE */
+
+  .container form{
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  .container form input{
+    margin-top: 1%;
+    width: 200px;
+  }
