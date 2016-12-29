@@ -8,6 +8,7 @@ $checkboxe3 = "";
 $checkboxe4 = "";
 $checkboxe5 = "";
 $sep= " ";
+$day=date('Y-m-d');
 
 if (isset($_POST['couv_emp'])) {
     $checkboxe1 = "Couvrir toutes les formes d'emploi";
@@ -32,7 +33,7 @@ $req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilo
 VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv)');
 $req->execute(array(
     'titre_proj' => $_POST['titre_proj'],
-    'date_demande_proj' => $_POST['date_proj'],
+    'date_demande_proj' => $day,
     'nom' => $_POST['nom_pil'],
     'email' => $_POST['email_pil'],
     'tel' => $_POST['tel_pil'],
