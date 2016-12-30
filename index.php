@@ -160,50 +160,52 @@
           </h2>
         </div>
         <div class="col-md-12">
-          <h1>
-            Déploiement
-          </h1>
-          <h3>Date envisagée de mise à disposition</h3>
-          <h2>
-            <strong>
-              <?php echo $donnees['date_deploi_fiche']; ?>
-            </strong>
-          </h2>
-          <h3>Ce qui paraît incontournable pour la réussite ?</h3>
-          <h2>
-            <strong>
-              <?php echo $donnees['facteur_succ_fiche']; ?>
-            </strong>
-          </h2>
-          <h3>Qui va porter cette offre au sein de nos réseaux</h3>
-          <h2>
-            <strong>
-              <?php echo $donnees['port_offre_fiche']; ?>
-            </strong>
-          </h2>
+          <div class="col-md-12">
+            <h1>
+              Déploiement
+            </h1>
+            <h3>Date envisagée de mise à disposition</h3>
+            <h2>
+              <strong>
+                <?php echo $donnees['date_deploi_fiche']; ?>
+              </strong>
+            </h2>
+            <h3>Ce qui paraît incontournable pour la réussite ?</h3>
+            <h2>
+              <strong>
+                <?php echo $donnees['facteur_succ_fiche']; ?>
+              </strong>
+            </h2>
+            <h3>Qui va porter cette offre au sein de nos réseaux</h3>
+            <h2>
+              <strong>
+                <?php echo $donnees['port_offre_fiche']; ?>
+              </strong>
+            </h2>
+          </div>
           <div class="col-md-12">
             <div class="col-md-4">
               <h3>Canal de déploiement</h3>
               <h2>
-                Ligne managériale
+                Ligne managériale : <br>
                 <strong>
                   <?php echo $donnees['lignem_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Pédagogie en réunion de zone
+                Pédagogie en réunion de zone : <br>
                 <strong>
                   <?php echo $donnees['pedagogie_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Rituels existants
+                Rituels existants : <br>
                 <strong>
-                  <?php echo $donnees['rituelfiche_fiche']; ?>
+                  <?php echo $donnees['rituel_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Précisions
+                Précisions : <br>
                 <strong>
                   <?php
                     echo $donnees['rituely_fiche'];
@@ -215,14 +217,14 @@
             <div class="col-md-4">
               <h3>Professionalisation</h3>
               <h2>
-                Appropriation à prévoir
+                Appropriation à prévoir: <br>
                 <strong>
                   <?php echo $donnees['approp_fiche']; ?>
                   <?php echo $donnees['mode_apropr_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Relais de professionalisation
+                Relais de professionalisation: <br>
                 <strong>
                   <?php echo $donnees['relprof_fiche']; ?>
                 </strong>
@@ -231,25 +233,25 @@
             <div class="col-md-4">
               <h3>Diffusion des supports</h3>
               <h2>
-                Essentiel
+                Essentiel: <br>
                 <strong>
                   <?php echo $donnees['diffess_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Intranet BU
+                Intranet BU : <br>
                 <strong>
                   <?php echo $donnees['diffintra_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Digital
+                Digital : <br>
                 <strong>
                   <?php echo $donnees['diffdig_fiche']; ?>
                 </strong>
               </h2>
               <h2>
-                Autre
+                Autre : <br>
                 <strong>
                   <?php echo $donnees['diffelse_fiche']; ?>
                 </strong>
@@ -261,37 +263,187 @@
               Synthèse
             </h1>
             <h2>
-              Effort d'implémentation
+              Effort d'implémentation :
               <strong>
-                <?php echo $donnees['syntheff_fiche']; ?>
+                <?php
+                switch ($donnees['syntheff_fiche']) {
+                  case '1':
+                ?>
+                  <img src="img\level1.png" alt="" />
+                <?php
+                    break;
+                  case '2':
+                ?>
+                  <img src="img\level2.png" alt="" />
+                <?php
+                    break;
+                  case '3':
+                ?>
+                  <img src="img\level3.png" alt="" />
+                <?php
+                    break;
+                  case '4':
+                ?>
+                  <img src="img\level4.png" alt="" />
+                <?php
+                    break;
+                  case '5':
+                ?>
+                  <img src="img\level5.png" alt="" />
+                <?php
+                    break;
+                  default:
+                    break;
+                }
+                ?>
               </strong>
             </h2>
             <h2>
-              Différenciation vs concurrence
+              Différenciation vs concurrence :
               <strong>
-                <?php echo $donnees['synthdiff_fiche']; ?>
+                <?php
+                switch ($donnees['synthdiff_fiche']) {
+                  case '1':
+                ?>
+                  <img src="img\level1.png" alt="" />
+                <?php
+                    break;
+                  case '2':
+                ?>
+                  <img src="img\level2.png" alt="" />
+                <?php
+                    break;
+                  case '3':
+                ?>
+                  <img src="img\level3.png" alt="" />
+                <?php
+                    break;
+                  case '4':
+                ?>
+                  <img src="img\level4.png" alt="" />
+                <?php
+                    break;
+                  case '5':
+                ?>
+                  <img src="img\level5.png" alt="" />
+                <?php
+                    break;
+                  default:
+                    break;
+                }
+                ?>
               </strong>
             </h2>
             <h2>
-              temps nécessaire déploiement
+              temps nécessaire déploiement :
               <strong>
-                <?php echo $donnees['synthtime_fiche']; ?>
+                <?php
+                switch ($donnees['synthtime_fiche']) {
+                  case '1':
+                ?>
+                  <img src="img\level1.png" alt="" />
+                <?php
+                    break;
+                  case '2':
+                ?>
+                  <img src="img\level2.png" alt="" />
+                <?php
+                    break;
+                  case '3':
+                ?>
+                  <img src="img\level3.png" alt="" />
+                <?php
+                    break;
+                  case '4':
+                ?>
+                  <img src="img\level4.png" alt="" />
+                <?php
+                    break;
+                  case '5':
+                ?>
+                  <img src="img\level5.png" alt="" />
+                <?php
+                    break;
+                  default:
+                    break;
+                }
+                ?>
               </strong>
             </h2>
             <h2>
-              Facilité de mesure d'impact
+              Facilité de mesure d'impact :
               <strong>
-                <?php echo $donnees['synthimp_fiche']; ?>
+                <?php
+                switch ($donnees['synthimp_fiche']) {
+                  case '1':
+                ?>
+                  <img src="img\level1.png" alt="" />
+                <?php
+                    break;
+                  case '2':
+                ?>
+                  <img src="img\level2.png" alt="" />
+                <?php
+                    break;
+                  case '3':
+                ?>
+                  <img src="img\level3.png" alt="" />
+                <?php
+                    break;
+                  case '4':
+                ?>
+                  <img src="img\level4.png" alt="" />
+                <?php
+                    break;
+                  case '5':
+                ?>
+                  <img src="img\level5.png" alt="" />
+                <?php
+                    break;
+                  default:
+                    break;
+                }
+                ?>
               </strong>
             </h2>
             <h2>
-              Impact business
+              Impact business :
               <strong>
-                <?php echo $donnees['synthcrea_fiche']; ?>
+                <?php
+                switch ($donnees['synthcrea_fiche']) {
+                  case '1':
+                ?>
+                  <img src="img\level1.png" alt="" />
+                <?php
+                    break;
+                  case '2':
+                ?>
+                  <img src="img\level2.png" alt="" />
+                <?php
+                    break;
+                  case '3':
+                ?>
+                  <img src="img\level3.png" alt="" />
+                <?php
+                    break;
+                  case '4':
+                ?>
+                  <img src="img\level4.png" alt="" />
+                <?php
+                    break;
+                  case '5':
+                ?>
+                  <img src="img\level5.png" alt="" />
+                <?php
+                    break;
+                  default:
+                    break;
+                }
+                ?>
               </strong>
             </h2>
             <h2>
-              Motivations personnelles
+              Motivations personnelles : <br>
               <strong>
                 <?php echo $donnees['synthmotiv_fiche']; ?>
               </strong>
@@ -302,6 +454,7 @@
     <?php
       }
       $reponse_taches->closeCursor();
+
       ?>
    </div>
  </div>
