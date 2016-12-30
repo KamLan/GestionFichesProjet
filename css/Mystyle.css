@@ -90,7 +90,13 @@ body h3{
 
 /*INDEX */
 
+/*FICHE*/
 
+div.col-md-6.validate{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
 
 /* PROJECT */
 

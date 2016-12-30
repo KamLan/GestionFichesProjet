@@ -9,6 +9,7 @@ $checkboxe4 = "";
 $checkboxe5 = "";
 $sep= " ";
 $day=date('Y-m-d');
+$etatvalidation = "standby";
 
 if (isset($_POST['couv_emp'])) {
     $checkboxe1 = "Couvrir toutes les formes d'emploi";
@@ -29,8 +30,8 @@ if (isset($_POST['dig_rs'])) {
   $checkboxes= $checkboxe1.$sep.$checkboxe2.$sep.$checkboxe3;
   $checkboxes2= $checkboxe4.$sep.$checkboxe5;
 
-$req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilote_nom_fiche, pilote_email_fiche, pilote_mobile_fiche, pilote_soc_fiche, prio_strat_fiche, bu_proj_fiche, nom_mem_fiche, contexte_proj_fiche, description_proj_fiche, objectif_proj_fiche, ciblage_ent_fiche, ciblage_cand_fiche, ciblage_int_fiche, benef_proj_fiche, gains_proj_fiche, perim_proj_fiche, date_deploi_fiche, facteur_succ_fiche, port_offre_fiche, lignem_fiche, pedagogie_fiche, rituel_fiche, rituely_fiche, ritueln_fiche, approp_fiche, mode_apropr_fiche, relprof_fiche, diffess_fiche, diffintra_fiche, diffdig_fiche, diffelse_fiche, syntheff_fiche, synthdiff_fiche, synthtime_fiche, synthimp_fiche, synthcrea_fiche, synthmotiv_fiche)
-VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv)');
+$req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilote_nom_fiche, pilote_email_fiche, pilote_mobile_fiche, pilote_soc_fiche, prio_strat_fiche, bu_proj_fiche, nom_mem_fiche, contexte_proj_fiche, description_proj_fiche, objectif_proj_fiche, ciblage_ent_fiche, ciblage_cand_fiche, ciblage_int_fiche, benef_proj_fiche, gains_proj_fiche, perim_proj_fiche, date_deploi_fiche, facteur_succ_fiche, port_offre_fiche, lignem_fiche, pedagogie_fiche, rituel_fiche, rituely_fiche, ritueln_fiche, approp_fiche, mode_apropr_fiche, relprof_fiche, diffess_fiche, diffintra_fiche, diffdig_fiche, diffelse_fiche, syntheff_fiche, synthdiff_fiche, synthtime_fiche, synthimp_fiche, synthcrea_fiche, synthmotiv_fiche, validation_fiche)
+VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv, :validation)');
 $req->execute(array(
     'titre_proj' => $_POST['titre_proj'],
     'date_demande_proj' => $day,
@@ -71,6 +72,7 @@ $req->execute(array(
     'synthimp' => $_POST['fac'],
     'synthcrea' => $_POST['crea'],
     'synthmotiv' => $_POST['motiv_perso'],
+    'validation' => $etatvalidation,
     ));
 
 header('location: index.php');

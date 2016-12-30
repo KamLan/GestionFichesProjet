@@ -25,6 +25,27 @@
               <?php echo $donnees['titre_projet'] ?>
             </a>
           </strong>
+          <?php
+            switch ($donnees['validation_fiche']) {
+              case 'standby':
+          ?>
+                <img src="img\standby.png" alt="" />
+          <?php
+                break;
+              case 'approved':
+          ?>
+                <img src="img\approved.png" alt="" />
+          <?php
+                break;
+              case 'denied':
+          ?>
+                <img src="img\denied.png" alt="" />
+          <?php
+                break;
+              default:
+                break;
+            }
+           ?>
         </h1>
         <h2>
           <strong>

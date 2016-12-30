@@ -24,6 +24,27 @@
             Projet :
             <?php echo $donnees2['titre_projet'] ?>
           </strong>
+          <?php
+            switch ($donnees2['validation_fiche']) {
+              case 'standby':
+          ?>
+                <img src="img\standby.png" alt="" />
+          <?php
+                break;
+              case 'approved':
+          ?>
+                <img src="img\approved.png" alt="" />
+          <?php
+                break;
+              case 'denied':
+          ?>
+                <img src="img\denied.png" alt="" />
+          <?php
+                break;
+              default:
+                break;
+            }
+           ?>
         </h1>
         <h2>
           <strong>
@@ -454,6 +475,15 @@
       }
       $reponse_id->closeCursor();
       ?>
+
+    <div class="col-md-12">
+      <div class="col-md-6 validate">
+        <a href="approved.php?ficheid=<?php echo $fiche ?>">Valider le projet</a>
+      </div>
+      <div class="col-md-6 validate">
+        <a href="denied.php?ficheid=<?php echo $fiche ?>">Rejeter le projet</a>
+      </div>
+    </div>
    </div>
  </div>
 
