@@ -151,7 +151,6 @@ div.col-md-6.validate{
 
   .brandlogo{
     position: relative;
-    top:43px;
     left:95px;
     height:150px;
   }
@@ -193,6 +192,7 @@ div.col-md-6.validate{
   .container form input{
     margin-top: 1%;
     width: 200px;
+    margin-right: 4%;
   }
 
   .blockform{
@@ -253,6 +253,10 @@ div.col-md-6.validate{
 
   div.pilote{
     text-align: center;
+  }
+
+  .pilote select{
+    width:60%;
   }
 
   form input.radiocheck{

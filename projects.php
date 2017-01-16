@@ -10,41 +10,47 @@
       <div class="col-md-9">
         <h1>
           <strong>
-            Comité des offres |
+            Comité des offres <br>
           </strong>
           Fiche projet pour validation
         </h1>
-        <h2>
-          date demande :
-          <strong>
-            <?php
-              $today = date('d-m-Y');
-              echo $today;
-           ?>
-          </strong>
-        </h2>
       </div>
     </div>
     <div class="col-md-12 projects">
-      <form class="" name="formulaire" action="inserttask.php" method="post">
-        <div class="col-md-12 centerit" >
-          <input type="text" name="titre_proj" placeholder="Titre du projet" value="">
+      <form class="mainform" id="formproject" name="formulaire" action="inserttask.php" method="post">
+        <div class="col-md-12 centerit">
+          <input type="text" name="titre_proj" placeholder="Titre du projet" value="" style="margin-bottom:0px; margin-right:0px;"id="testinput" class="champ" >
+          <h4>
+            date demande :
+            <strong>
+              <?php
+                $today = date('d-m-Y');
+                echo $today;
+             ?>
+            </strong>
+          </h4>
         </div>
         <div class="part1">
           <h2>
             1 Identification
-            <img src="img/eye.png" alt="" id="affiche" />
-            <img src="img/eyenone.png" alt="" id="cache" />
+            <div class="openclose">
+              <img src="img/plus.png" alt="" id="affiche" />
+              <img src="img/close.png" alt="" id="cache" />
+            </div>
           </h2>
           <div class="col-md-12 blockform" id="1" style="background-color:#e6e6e6">
             <h3>
               Personne en charge du projet et de son implémentation
             </h3>
             <div class="col-md-12 pilote">
-              <input type="text" name="nom_pil" placeholder="Nom" value="">
-              <input type="email" name="email_pil" placeholder="Email" value="">
-              <input type="text" name="tel_pil" placeholder="Tel Portable" value="">
-              <input type="text" name="soc_pil" placeholder="Societe" value="">
+              <label for="nom_pil">Nom</label>
+              <input type="text" name="nom_pil" placeholder="" id="nom_pil" value="" class="champ">
+              <label for="email_pil">Email</label>
+              <input type="email" name="email_pil" placeholder="" id="email_pil" value="" class="champ">
+              <label for="tel_pil">Téléphone</label>
+              <input type="text" name="tel_pil" placeholder="" id="tel_pil" value="" class="champ">
+              <label for="soc_pil">Société</label>
+              <input type="text" name="soc_pil" placeholder="" id="soc_pil" value="" class="champ">
             </div>
             <div class="col-md-6 block">
               <div class="col-md-12">
@@ -55,7 +61,7 @@
                     </h3>
                   </div>
                   <div class="col-md-6 entity">
-                    <input type="text" name="bu_proj" placeholder="BU" value="">
+                    <input type="text" name="bu_proj" placeholder="BU" value="" id="bu_proj" class="champ">
                   </div>
                 </div>
                 <div class="col-md-12">
@@ -65,7 +71,7 @@
                     </h3>
                   </div>
                   <div class="col-md-6 entity">
-                    <input type="text" name="name_mem" placeholder="nom" value="">
+                    <input type="text" name="name_mem" placeholder="nom" value="" id="name_manag" class="champ">
                   </div>
                 </div>
               </div>
@@ -77,18 +83,25 @@
                 </h3>
               </div>
               <div class="col-md-6">
-                  <img src="img\checked.png" id="prio1C" alt="" style="display:none"/>
-                  <img src="img\multiply.png" id="prio1C2" alt=""/>
+
                   <input type="checkbox" name="couv_emp" value="" id="prio1" class="radiocheck" style="display:none">
-                  <label for="prio1">Couvrir toutes les formes d'emploi</label> <br>
-                  <img src="img\checked.png" id="prio2C" alt="" style="display:none"/>
-                  <img src="img\multiply.png" id="prio2C2" alt=""/>
+                  <label for="prio1">
+                    <img src="img\checked.png" id="prio1C" alt="" style="display:none"/>
+                    <img src="img\multiply.png" id="prio1C2" alt=""/>
+                    Couvrir toutes les formes d'emploi
+                  </label> <br>
                   <input type="checkbox" name="acc_transf" value="" id="prio2" class="radiocheck" style="display:none">
-                  <label for="prio2">Accompagner la transformation des compétences</label> <br>
-                  <img src="img\checked.png" id="prio3C" alt="" style="display:none"/>
-                  <img src="img\multiply.png" id="prio3C2" alt=""/>
+                  <label for="prio2">
+                    <img src="img\checked.png" id="prio2C" alt="" style="display:none"/>
+                    <img src="img\multiply.png" id="prio2C2" alt=""/>
+                    Accompagner la transformation des compétences
+                  </label> <br>
                   <input type="checkbox" name="new_digit" value="" id="prio3" class="radiocheck" style="display:none">
-                  <label for="prio3">Proposer de nouvelles solutions digitales</label>
+                  <label for="prio3">
+                    <img src="img\checked.png" id="prio3C" alt="" style="display:none"/>
+                    <img src="img\multiply.png" id="prio3C2" alt=""/>
+                    Proposer de nouvelles solutions digitales
+                  </label>
               </div>
             </div>
           </div>
@@ -96,49 +109,103 @@
         <div class="part2">
           <h2>
             2 Description
-            <img src="img/eye.png" alt="" id="affiche2" />
-            <img src="img/eyenone.png" alt="" id="cache2" />
+            <div class="openclose">
+              <img src="img/plus.png" alt="" id="affiche2" />
+              <img src="img/close.png" alt="" id="cache2" />
+            </div>
           </h2>
           <div class="col-md-12 blockform" id="2" style="background-color:#ececec">
             <div class="col-md-4">
-              <textarea name="contexte_proj" rows="4" cols="40" placeholder="Pourquoi ce projet ? Comment est-il né ?"></textarea> <br>
-              <textarea name="descri_proj" rows="4" cols="40" placeholder="Décrire l'action / le projet - ce qui doit être fait"></textarea> <br>
-              <textarea name="obj_proj" rows="4 " cols="40" placeholder="indiquer les objectif visés - quoi, combien, pour quand"></textarea><br><br>
+              <label for="ta1"><strong>Pourquoi ce projet? Comment</strong> est-il né?</label>
+              <textarea name="contexte_proj" rows="4" cols="40" placeholder="Contexte" id="ta1" class="champ"></textarea> <br>
+              <label for="ta2"><strong>Décrire l'action du projet.</strong> ce qui doit être fait</label>
+              <textarea name="descri_proj" rows="4" cols="40" placeholder="Description" id=ta2 class="champ"></textarea> <br>
+              <label for="ta3"><strong>Indiquer les objectifs visés.</strong> Quoi, combien...</label>
+              <textarea name="obj_proj" rows="4 " cols="40" placeholder="Objectif" id="ta3" class="champ"></textarea><br><br>
             </div>
             <div class="col-md-4 pilote">
-              <label for="cibl1">Ciblage entreprise :</label> <br>
-               <select class="" name="cibl_ent" id="cibl1">
-                <option> Small
-                <option> Medium
-                <option> Large
-              </select> <br><br>
-              <label for="cibl2">Ciblage candidats :</label> <br>
-              <select class="" name="cibl_cand" id="cibl2">
-                <option> General Staffing
-                <option> Professional Staffing
-                <option> Tous profils
-              </select> <br><br>
-              <label for="cibl3">Ciblage interlocuteurs clients :</label> <br>
-              <select class="" name="cibl_cli" id="cibl3">
-                <option> DRH
-                <option> Acheteurs
-                <option> Finance
-                <option> Producteurs
-                <option> Autres
-              </select> <br><br>
+              <label for="">Ciblage entreprise :</label> <br>
+              <input type="checkbox" name="cible_e_s" value="" id="cible_e_1" class="radiocheck" style="display:none">
+              <label for="cible_e_1">
+                <img src="img\checked.png" id="cible_e_1C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_e_1C2" alt=""/>
+                Small
+              </label> <br>
+              <input type="checkbox" name="cible_e_m" value="" id="cible_e_2" class="radiocheck" style="display:none">
+              <label for="cible_e_2">
+                <img src="img\checked.png" id="cible_e_2C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_e_2C2" alt=""/>
+                Medium
+              </label> <br>
+              <input type="checkbox" name="cible_e_l" value="" id="cible_e_3" class="radiocheck" style="display:none">
+              <label for="cible_e_3">
+                <img src="img\checked.png" id="cible_e_3C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_e_3C2" alt=""/>
+                Large
+              </label> <br>
+              <label for="">Ciblage candidats :</label> <br>
+              <input type="checkbox" name="cible_c_1" value="" id="cible_c_1" class="radiocheck" style="display:none">
+              <label for="cible_c_1">
+                <img src="img\checked.png" id="cible_c_1C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_c_1C2" alt=""/>
+                General Staffing
+              </label> <br>
+              <input type="checkbox" name="cible_c_2" value="" id="cible_c_2" class="radiocheck" style="display:none">
+              <label for="cible_c_2">
+                <img src="img\checked.png" id="cible_c_2C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_c_2C2" alt=""/>
+                Professional Staffing
+              </label> <br>
+              <input type="checkbox" name="cible_c_3" value="" id="cible_c_3" class="radiocheck" style="display:none">
+              <label for="cible_c_3">
+                <img src="img\checked.png" id="cible_c_3C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_c_3C2" alt=""/>
+                Tous profils
+              </label> <br>
+              <label for="">Ciblage interlocuteurs clients :</label> <br>
+              <input type="checkbox" name="cible_i_1" value="" id="cible_i_1" class="radiocheck" style="display:none">
+              <label for="cible_i_1">
+                <img src="img\checked.png" id="cible_i_1C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_i_1C2" alt=""/>
+                DRH
+              </label> <br>
+              <input type="checkbox" name="cible_i_2" value="" id="cible_i_2" class="radiocheck" style="display:none">
+              <label for="cible_i_2">
+                <img src="img\checked.png" id="cible_i_2C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_i_2C2" alt=""/>
+                Acheteurs
+              </label> <br>
+              <input type="checkbox" name="cible_i_3" value="" id="cible_i_3" class="radiocheck" style="display:none">
+              <label for="cible_i_3">
+                <img src="img\checked.png" id="cible_i_3C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_i_3C2" alt=""/>
+                Finance
+              </label> <br>
+              <input type="checkbox" name="cible_i_4" value="" id="cible_i_4" class="radiocheck" style="display:none">
+              <label for="cible_i_4">
+                <img src="img\checked.png" id="cible_i_4C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="cible_i_4C2" alt=""/>
+                Autres
+              </label>
+              <textarea name="autrecible" id="textarea8" rows="8" cols="40" placeholder="Précisez"></textarea>
             </div>
             <div class="col-md-4">
-              <textarea name="benef_proj" rows="4" cols="40" placeholder="Descriptif qualitatif des bénéfices attendus, retombées, ..."></textarea> <br>
-              <textarea name="gain_proj" rows="4" cols="40" placeholder="Gains chiffrés attendus si quantifiables, hains qualitatifs explicités - Indicateurs objectif de suivi proposés (obligatoire) et comment les suivre (outil)"></textarea> <br>
-              <textarea name="perim_proj" rows="4" cols="40" placeholder="Quelles sont les entités / directions concernées par l'action ou le projet"></textarea> <br>
+              <label for="ta4"><strong>Descriptif qualitatif des bénéfices attendus</strong></label>
+              <textarea name="benef_proj" rows="4" cols="40" placeholder="Bénéfices attendus" id="ta4" class="champ"></textarea> <br>
+              <label for="ta5"><strong>Gains chiffrés attendus si quantifiables</strong></label>
+              <textarea name="gain_proj" rows="4" cols="40" placeholder="Gains/indicateurs" id=ta5 class="champ"></textarea> <br>
+              <label for="ta6">Quelles sont les entités concernées par le projet</label>
+              <textarea name="perim_proj" rows="4" cols="40" placeholder="Périmetre" id="ta6" class="champ"></textarea> <br>
             </div>
           </div>
         </div>
         <div class="part3">
           <h2>
             3 Déploiement
-            <img src="img/eye.png" alt="" id="affiche3" />
-            <img src="img/eyenone.png" alt="" id="cache3" />
+            <div class="openclose">
+              <img src="img/plus.png" alt="" id="affiche3" />
+              <img src="img/close.png" alt="" id="cache3" />
+            </div>
           </h2>
           <div class="col-md-12 blockform" id="3" style="background-color:#f5f5f5">
             <div class="col-md-4 pilote">
@@ -149,15 +216,15 @@
             </div>
             <div class="col-md-4">
               <h3>
-                Facteurs clés de succès
+                Ce qui paraît incontournable pour la réussite
               </h3>
-              <textarea name="facteur_succ" rows="4" cols="40" placeholder="Qu'est-ce qui vous paraît incontournable dans le déploiement pour la réussite du projet ?"></textarea>
+              <textarea name="facteur_succ" rows="4" cols="40" placeholder="Facteurs clés" id="ta7" class="champ"></textarea>
             </div>
             <div class="col-md-4">
               <h3>
-                Porteurs de l'offre
+                Qui va porter cette offre au sein de nos réseaux
               </h3>
-              <textarea name="port_offre" rows="4" cols="40" placeholder="Qui va porter cette offre au sein de nos réseaux - identifier les fonctions clés"></textarea>
+              <textarea name="port_offre" rows="4" cols="40" placeholder="Précisez" id="ta8" class="champ"></textarea>
             </div>
             <div class="col-md-4 pilote">
               <h3>
@@ -172,8 +239,8 @@
               Rituel existant pour lancer le projet <br>
               <input type="radio" name="Rituel" value="oui" id="affichetext1" class="radiocheck">Oui
               <input type="radio" name="Rituel" value="non" id="affichetext2" class="radiocheck">Non <br>
-              <textarea name="R_y_text" rows="4" cols="40" placeholder="Préciser (ex: réunions DZ, calls hebdo, autre, ...)" id="5"></textarea> <br>
-              <textarea name="R_n_text" rows="4" cols="40" placeholder="Pourquoi ?" id="6"></textarea> <br>
+              <textarea name="R_y_text" rows="4" cols="40" placeholder="Précisez (ex: réunions DZ, calls hebdo, autre, ...)" id="5" class="champ"></textarea> <br>
+              <textarea name="R_n_text" rows="4" cols="40" placeholder="Pourquoi ?" id="6" class="champ"></textarea> <br>
             </div>
             <div class="col-md-4 pilote">
               <h3>
@@ -183,8 +250,8 @@
               <input type="radio" name="Aprop" value="oui" id="affichetext3" class="radiocheck">Oui
               <input type="radio" name="Aprop" value="préconisé" id="affichetext4" class="radiocheck">Préconisé
               <input type="radio" name="Aprop" value="non" id="cachertext3" class="radiocheck">Non <br><br>
-              <textarea name="A_ym_text" rows="4" cols="40" placeholder="Préciser le mode d'appropriation" id="7"></textarea> <br>
-              <textarea name="rel_prof" rows="4" cols="40" Placeholder="Préciser (ex: RESZ, RVZ, Ingénieurs formation, ...)"></textarea>
+              <textarea name="A_ym_text" rows="4" cols="40" placeholder="Précisez le mode d'appropriation" id="7" class="champ"></textarea> <br>
+              <textarea name="rel_prof" rows="4" cols="40" Placeholder="Précisez" id="8" class="champ" ></textarea>
             </div>
             <div class="col-md-4 pilote">
               <h3>
@@ -197,25 +264,31 @@
               <input type="radio" name="Intra" value="oui" class="radiocheck">Oui
               <input type="radio" name="Intra" value="non" class="radiocheck">Non <br>
               Digital <br>
-              <img src="img\checked.png" id="dig1C" alt="" style="display:none"/>
-              <img src="img\multiply.png" id="dig1C2" alt=""/>
-              <label for="dig1">Site internet BU</label> <br>
+              <label for="dig1">
+                <img src="img\checked.png" id="dig1C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="dig1C2" alt=""/>
+                Site internet BU
+              </label> <br>
               <input type="checkbox" name="dig_si" value="" id="dig1" class="radiocheck" style="display:none">
-              <img src="img\checked.png" id="dig2C" alt="" style="display:none"/>
-              <img src="img\multiply.png" id="dig2C2" alt=""/>
-              <label for="dig2">Réseaux sociaux BU</label>
+              <label for="dig2">
+                <img src="img\checked.png" id="dig2C" alt="" style="display:none"/>
+                <img src="img\multiply.png" id="dig2C2" alt=""/>
+                Réseaux sociaux BU
+              </label>
               <input type="checkbox" name="dig_rs" value="" id="dig2" class="radiocheck" class="radiocheck" style="display:none">
                <br><br>
               Autre <br>
-              <textarea name="autre_diff" rows="4" cols="40" placeholder="Préciser"></textarea>
+              <textarea name="autre_diff" rows="4" cols="40" placeholder="Précisez" id="9" class="champ" ></textarea>
             </div>
           </div>
         </div>
         <div class="part4">
           <h2>
-            4 Synthèse : Votre vision du projet (bleu --, vert ++)
-            <img src="img/eye.png" alt="" id="affiche4" />
-            <img src="img/eyenone.png" alt="" id="cache4" />
+            4 Synthèse : Votre vision du projet (1-faible, 5-important)
+            <div class="openclose">
+              <img src="img/plus.png" alt="" id="affiche4" />
+              <img src="img/close.png" alt="" id="cache4" />
+            </div>
           </h2>
           <div class="col-md-12 blockform" id="4" style="background-color:#fdfdfd">
             <div class="col-md-2 mainotation">
@@ -369,7 +442,7 @@
               <input type="radio" name="crea" value="5" class="radiocheck" id="radio25" style="display:none"> <br> <br>
             </div>
             <div class="col-md-6 motivation">
-                <textarea name="motiv_perso" rows="4" cols="40" placeholder="Pourquoi vous y tenez - vos motivations à mener à bien ce projet personnellement"></textarea> <br>
+                <textarea name="motiv_perso" rows="4" cols="40" placeholder="Pourquoi vous y tenez - vos motivations à mener à bien ce projet personnellement" id="10" class="champ"></textarea> <br>
             </div>
           </div> <br>
         </div>
@@ -378,503 +451,6 @@
         </div>
       </form>
     </div>
-    <script type="text/javascript">
-      $(function (){
-        $('div#1').hide();
-        $('div#2').hide();
-        $('div#3').hide();
-        $('div#4').hide();
-        $('textarea#5').hide();
-        $('textarea#6').hide();
-        $('textarea#7').hide();
-        $('#cache').hide();
-        $('#cache2').hide();
-        $('#cache3').hide();
-        $('#cache4').hide();
-        $('#prio1').click(function(){
-          $('#prio1C').toggle('slow');
-          $('#prio1C2').toggle('slow');
-        });
-        $('#prio2').click(function(){
-          $('#prio2C').toggle('slow');
-          $('#prio2C2').toggle('slow');
-        });
-        $('#prio3').click(function(){
-          $('#prio3C').toggle('slow');
-          $('#prio3C2').toggle('slow');
-        });
-        $('#dig1').click(function(){
-          $('#dig1C').toggle('slow');
-          $('#dig1C2').toggle('slow');
-        });
-        $('#dig2').click(function(){
-          $('#dig2C').toggle('slow');
-          $('#dig2C2').toggle('slow');
-        });
-        $('#affiche').click(function(){
-          $('div#1').show('slow');
-          $('#cache').show('slow');
-          $('#affiche').hide(1000);
-        });
-        $('#cache').click(function(){
-          $('div#1').hide(1000);
-          $('#cache').hide(1000);
-          $('#affiche').show('slow');
-        });
-        $('#affiche2').click(function(){
-          $('div#2').show('slow');
-          $('#cache2').show('slow');
-          $('#affiche2').hide(1000);
-        });
-        $('#cache2').click(function(){
-          $('div#2').hide(1000);
-          $('#cache2').hide(1000);
-          $('#affiche2').show('slow');
-        });
-        $('#affiche3').click(function(){
-          $('div#3').show('slow');
-          $('#cache3').show('slow');
-          $('#affiche3').hide(1000);
-        });
-        $('#cache3').click(function(){
-          $('div#3').hide(1000);
-          $('#cache3').hide(1000);
-          $('#affiche3').show('slow');
-        });
-        $('#affiche4').click(function(){
-          $('div#4').show('slow');
-          $('#cache4').show('slow');
-          $('#affiche4').hide(1000);
-        });
-        $('#cache4').click(function(){
-          $('div#4').hide(1000);
-          $('#cache4').hide(1000);
-          $('#affiche4').show('slow');
-        });
-        $('#affichetext1').click(function(){
-          $('textarea#5').show('slow');
-          $('textarea#6').hide(1000);
-        });
-        $('#affichetext2').click(function(){
-          $('textarea#6').show('slow');
-          $('textarea#5').hide(1000);
-        });
-        $('#affichetext3').click(function(){
-          $('textarea#7').show('slow');
-        });
-        $('#affichetext4').click(function(){
-          $('textarea#7').show('slow');
-        });
-        $('#cachertext3').click(function(){
-          $('textarea#7').hide(1000);
-        });
-        $('.labelradio1').click(function(){
-          $('#labelcheck1').toggle('slow');
-          $('#labelimg1').toggle('slow');
-          $('#labelimg2').show();
-          $('#labelimg3').show();
-          $('#labelimg4').show();
-          $('#labelimg5').show();
-          $('#labelcheck2').hide();
-          $('#labelcheck3').hide();
-          $('#labelcheck4').hide();
-          $('#labelcheck5').hide();
-        });
-        $('.labelradio2').click(function(){
-          $('#labelcheck2').toggle('slow');
-          $('#labelimg2').toggle('slow');
-          $('#labelimg1').show();
-          $('#labelimg3').show();
-          $('#labelimg4').show();
-          $('#labelimg5').show();
-          $('#labelcheck1').hide();
-          $('#labelcheck3').hide();
-          $('#labelcheck4').hide();
-          $('#labelcheck5').hide();
-        });
-        $('.labelradio3').click(function(){
-          $('#labelcheck3').toggle('slow');
-          $('#labelimg3').toggle('slow');
-          $('#labelimg1').show();
-          $('#labelimg2').show();
-          $('#labelimg4').show();
-          $('#labelimg5').show();
-          $('#labelcheck1').hide();
-          $('#labelcheck2').hide();
-          $('#labelcheck4').hide();
-          $('#labelcheck5').hide();
-        });
-        $('.labelradio4').click(function(){
-          $('#labelcheck4').toggle('slow');
-          $('#labelimg4').toggle('slow');
-          $('#labelimg1').show();
-          $('#labelimg2').show();
-          $('#labelimg3').show();
-          $('#labelimg5').show();
-          $('#labelcheck1').hide();
-          $('#labelcheck2').hide();
-          $('#labelcheck3').hide();
-          $('#labelcheck5').hide();
-        });
-        $('.labelradio5').click(function(){
-          $('#labelcheck5').toggle('slow');
-          $('#labelimg5').toggle('slow');
-          $('#labelimg1').show();
-          $('#labelimg2').show();
-          $('#labelimg3').show();
-          $('#labelimg4').show();
-          $('#labelcheck1').hide();
-          $('#labelcheck2').hide();
-          $('#labelcheck3').hide();
-          $('#labelcheck4').hide();
-        });
-        $('.labelradio6').click(function(){
-          $('#labelcheck6').toggle('slow');
-          $('#labelimg6').toggle('slow');
-          $('#labelimg7').show();
-          $('#labelimg8').show();
-          $('#labelimg9').show();
-          $('#labelimg10').show();
-          $('#labelcheck7').hide();
-          $('#labelcheck8').hide();
-          $('#labelcheck9').hide();
-          $('#labelcheck10').hide();
-        });
-        $('.labelradio7').click(function(){
-          $('#labelcheck7').toggle('slow');
-          $('#labelimg7').toggle('slow');
-          $('#labelimg6').show();
-          $('#labelimg8').show();
-          $('#labelimg9').show();
-          $('#labelimg10').show();
-          $('#labelcheck6').hide();
-          $('#labelcheck8').hide();
-          $('#labelcheck9').hide();
-          $('#labelcheck10').hide();
-        });
-        $('.labelradio8').click(function(){
-          $('#labelcheck8').toggle('slow');
-          $('#labelimg8').toggle('slow');
-          $('#labelimg6').show();
-          $('#labelimg7').show();
-          $('#labelimg9').show();
-          $('#labelimg10').show();
-          $('#labelcheck6').hide();
-          $('#labelcheck7').hide();
-          $('#labelcheck9').hide();
-          $('#labelcheck10').hide();
-        });
-        $('.labelradio9').click(function(){
-          $('#labelcheck9').toggle('slow');
-          $('#labelimg9').toggle('slow');
-          $('#labelimg6').show();
-          $('#labelimg7').show();
-          $('#labelimg8').show();
-          $('#labelimg10').show();
-          $('#labelcheck6').hide();
-          $('#labelcheck7').hide();
-          $('#labelcheck8').hide();
-          $('#labelcheck10').hide();
-        });
-        $('.labelradio10').click(function(){
-          $('#labelcheck10').toggle('slow');
-          $('#labelimg10').toggle('slow');
-          $('#labelimg6').show();
-          $('#labelimg7').show();
-          $('#labelimg8').show();
-          $('#labelimg9').show();
-          $('#labelcheck6').hide();
-          $('#labelcheck7').hide();
-          $('#labelcheck8').hide();
-          $('#labelcheck9').hide();
-        });
-        $('.labelradio11').click(function(){
-          $('#labelcheck11').toggle('slow');
-          $('#labelimg11').toggle('slow');
-          $('#labelimg12').show();
-          $('#labelimg13').show();
-          $('#labelimg14').show();
-          $('#labelimg15').show();
-          $('#labelcheck12').hide();
-          $('#labelcheck13').hide();
-          $('#labelcheck14').hide();
-          $('#labelcheck15').hide();
-        });
-        $('.labelradio12').click(function(){
-          $('#labelcheck12').toggle('slow');
-          $('#labelimg12').toggle('slow');
-          $('#labelimg11').show();
-          $('#labelimg13').show();
-          $('#labelimg14').show();
-          $('#labelimg15').show();
-          $('#labelcheck11').hide();
-          $('#labelcheck13').hide();
-          $('#labelcheck14').hide();
-          $('#labelcheck15').hide();
-        });
-        $('.labelradio13').click(function(){
-          $('#labelcheck13').toggle('slow');
-          $('#labelimg13').toggle('slow');
-          $('#labelimg11').show();
-          $('#labelimg12').show();
-          $('#labelimg14').show();
-          $('#labelimg15').show();
-          $('#labelcheck11').hide();
-          $('#labelcheck12').hide();
-          $('#labelcheck14').hide();
-          $('#labelcheck15').hide();
-        });
-        $('.labelradio14').click(function(){
-          $('#labelcheck14').toggle('slow');
-          $('#labelimg14').toggle('slow');
-          $('#labelimg11').show();
-          $('#labelimg12').show();
-          $('#labelimg13').show();
-          $('#labelimg15').show();
-          $('#labelcheck11').hide();
-          $('#labelcheck12').hide();
-          $('#labelcheck13').hide();
-          $('#labelcheck15').hide();
-        });
-        $('.labelradio15').click(function(){
-          $('#labelcheck15').toggle('slow');
-          $('#labelimg15').toggle('slow');
-          $('#labelimg11').show();
-          $('#labelimg12').show();
-          $('#labelimg13').show();
-          $('#labelimg14').show();
-          $('#labelcheck11').hide();
-          $('#labelcheck12').hide();
-          $('#labelcheck13').hide();
-          $('#labelcheck14').hide();
-        });
-        $('.labelradio16').click(function(){
-          $('#labelcheck16').toggle('slow');
-          $('#labelimg16').toggle('slow');
-          $('#labelimg17').show();
-          $('#labelimg18').show();
-          $('#labelimg19').show();
-          $('#labelimg20').show();
-          $('#labelcheck17').hide();
-          $('#labelcheck18').hide();
-          $('#labelcheck19').hide();
-          $('#labelcheck20').hide();
-        });
-        $('.labelradio17').click(function(){
-          $('#labelcheck17').toggle('slow');
-          $('#labelimg17').toggle('slow');
-          $('#labelimg16').show();
-          $('#labelimg18').show();
-          $('#labelimg19').show();
-          $('#labelimg20').show();
-          $('#labelcheck16').hide();
-          $('#labelcheck18').hide();
-          $('#labelcheck19').hide();
-          $('#labelcheck20').hide();
-        });
-        $('.labelradio18').click(function(){
-          $('#labelcheck18').toggle('slow');
-          $('#labelimg18').toggle('slow');
-          $('#labelimg16').show();
-          $('#labelimg17').show();
-          $('#labelimg19').show();
-          $('#labelimg20').show();
-          $('#labelcheck16').hide();
-          $('#labelcheck17').hide();
-          $('#labelcheck19').hide();
-          $('#labelcheck20').hide();
-        });
-        $('.labelradio19').click(function(){
-          $('#labelcheck19').toggle('slow');
-          $('#labelimg19').toggle('slow');
-          $('#labelimg16').show();
-          $('#labelimg17').show();
-          $('#labelimg18').show();
-          $('#labelimg20').show();
-          $('#labelcheck16').hide();
-          $('#labelcheck17').hide();
-          $('#labelcheck18').hide();
-          $('#labelcheck20').hide();
-        });
-        $('.labelradio20').click(function(){
-          $('#labelcheck20').toggle('slow');
-          $('#labelimg20').toggle('slow');
-          $('#labelimg16').show();
-          $('#labelimg17').show();
-          $('#labelimg18').show();
-          $('#labelimg19').show();
-          $('#labelcheck16').hide();
-          $('#labelcheck17').hide();
-          $('#labelcheck18').hide();
-          $('#labelcheck19').hide();
-        });
-        $('.labelradio21').click(function(){
-          $('#labelcheck21').toggle('slow');
-          $('#labelimg21').toggle('slow');
-          $('#labelimg22').show();
-          $('#labelimg23').show();
-          $('#labelimg24').show();
-          $('#labelimg25').show();
-          $('#labelcheck22').hide();
-          $('#labelcheck23').hide();
-          $('#labelcheck24').hide();
-          $('#labelcheck25').hide();
-        });
-        $('.labelradio22').click(function(){
-          $('#labelcheck22').toggle('slow');
-          $('#labelimg22').toggle('slow');
-          $('#labelimg21').show();
-          $('#labelimg23').show();
-          $('#labelimg24').show();
-          $('#labelimg25').show();
-          $('#labelcheck21').hide();
-          $('#labelcheck23').hide();
-          $('#labelcheck24').hide();
-          $('#labelcheck25').hide();
-        });
-        $('.labelradio23').click(function(){
-          $('#labelcheck23').toggle('slow');
-          $('#labelimg23').toggle('slow');
-          $('#labelimg21').show();
-          $('#labelimg22').show();
-          $('#labelimg24').show();
-          $('#labelimg25').show();
-          $('#labelcheck21').hide();
-          $('#labelcheck22').hide();
-          $('#labelcheck24').hide();
-          $('#labelcheck25').hide();
-        });
-        $('.labelradio24').click(function(){
-          $('#labelcheck24').toggle('slow');
-          $('#labelimg24').toggle('slow');
-          $('#labelimg21').show();
-          $('#labelimg22').show();
-          $('#labelimg23').show();
-          $('#labelimg25').show();
-          $('#labelcheck21').hide();
-          $('#labelcheck22').hide();
-          $('#labelcheck23').hide();
-          $('#labelcheck25').hide();
-        });
-        $('.labelradio25').click(function(){
-          $('#labelcheck25').toggle('slow');
-          $('#labelimg25').toggle('slow');
-          $('#labelimg21').show();
-          $('#labelimg22').show();
-          $('#labelimg23').show();
-          $('#labelimg24').show();
-          $('#labelcheck21').hide();
-          $('#labelcheck22').hide();
-          $('#labelcheck23').hide();
-          $('#labelcheck24').hide();
-        });
-      });
-
-      function Verif_form(formulaire){
-        if (document.formulaire.titre_proj.value=="") {
-          alert("Le champ: titre du projet n'est pas rempli !")
-        }
-        else if (document.formulaire.nom_pil.value=="") {
-          alert("Le champ: nom du pilote n'est pas rempli !")
-        }
-        else if (document.formulaire.email_pil.value=="") {
-          alert("Le champ: email du pilote n'est pas rempli !")
-        }
-        else if (document.formulaire.tel_pil.value=="") {
-          alert("Le champ: telephone du pilote n'est pas rempli !")
-        }
-        else if (document.formulaire.soc_pil.value=="") {
-          alert("Le champ: Société n'est pas rempli !")
-        }
-        else if (document.formulaire.bu_proj.value=="") {
-          alert("Le champ: BU n'est pas rempli !")
-        }
-        else if (document.formulaire.name_mem.value=="") {
-          alert("Le champ: Membre n'est pas rempli !")
-        }
-        else if (document.formulaire.contexte_proj.value=="") {
-          alert("Le champ: Contexte n'est pas rempli !")
-        }
-        else if (document.formulaire.descri_proj.value=="") {
-          alert("Le champ: Description n'est pas rempli !")
-        }
-        else if (document.formulaire.obj_proj.value=="") {
-          alert("Le champ: Objectifs n'est pas rempli !")
-        }
-        else if (document.formulaire.cibl_ent.value=="") {
-          alert("Le champ: Cibles Entreprises n'est pas rempli !")
-        }
-        else if (document.formulaire.cibl_cand.value=="") {
-          alert("Le champ: Cibles Candidats n'est pas rempli !")
-        }
-        else if (document.formulaire.cibl_cli.value=="") {
-          alert("Le champ: Cibles Clients n'est pas rempli !")
-        }
-        else if (document.formulaire.benef_proj.value=="") {
-          alert("Le champ: Bénéfices n'est pas rempli !")
-        }
-        else if (document.formulaire.gain_proj.value=="") {
-          alert("Le champ: Gains n'est pas rempli !")
-        }
-        else if (document.formulaire.perim_proj.value=="") {
-          alert("Le champ: Périmètre n'est pas rempli !")
-        }
-        else if (document.formulaire.date_dispodeploi.value=="") {
-          alert("Le champ: Date déploiement n'est pas rempli !")
-        }
-        else if (document.formulaire.facteur_succ.value=="") {
-          alert("Le champ: Facteurs succès n'est pas rempli !")
-        }
-        else if (document.formulaire.port_offre.value=="") {
-          alert("Le champ: Porteurs de l'offre n'est pas rempli !")
-        }
-        else if (document.formulaire.lm.value=="") {
-          alert("Le champ: Ligne managériale n'est pas rempli !")
-        }
-        else if (document.formulaire.Peda.value=="") {
-          alert("Le champ: Pédagogie n'est pas rempli !")
-        }
-        else if (document.formulaire.Rituel.value=="") {
-          alert("Le champ: Rituels n'est pas rempli !")
-        }
-        else if (document.formulaire.Aprop.value=="") {
-          alert("Le champ: Apropriation n'est pas rempli !")
-        }
-        else if (document.formulaire.rel_prof.value=="") {
-          alert("Le champ: Relais de professionalisation n'est pas rempli !")
-        }
-        else if (document.formulaire.Ess.value=="") {
-          alert("Le champ: Essentiel n'est pas rempli !")
-        }
-        else if (document.formulaire.Intra.value=="") {
-          alert("Le champ: Intranet n'est pas rempli !")
-        }
-        else if (document.formulaire.autre_diff.value=="") {
-          alert("Le champ: Autre n'est pas rempli !")
-        }
-        else if (document.formulaire.eff.value=="") {
-          alert("Le champ: Effort d'implémentation n'est pas rempli !")
-        }
-        else if (document.formulaire.diff.value=="") {
-          alert("Le champ: Différenciation vs concurrence n'est pas rempli !")
-        }
-        else if (document.formulaire.time.value=="") {
-          alert("Le champ: temps deploiement n'est pas rempli !")
-        }
-        else if (document.formulaire.fac.value=="") {
-          alert("Le champ: Mesure impact n'est pas rempli !")
-        }
-        else if (document.formulaire.crea.value=="") {
-          alert("Le champ: Creation de valeur n'est pas rempli !")
-        }
-        else if (document.formulaire.motiv_perso.value=="") {
-          alert("Le champ: Motivations n'est pas rempli !")
-        }
-        else {
-          alert("Bien joué le formulaire va être envoyé !! ")
-          formulaire.submit();
-        }
-      }
-    </script>
+    <script src="js/formScript.js"></script>
   </body>
 </html>

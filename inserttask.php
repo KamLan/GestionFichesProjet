@@ -7,6 +7,17 @@ $checkboxe2 = "";
 $checkboxe3 = "";
 $checkboxe4 = "";
 $checkboxe5 = "";
+$checkboxe6 = "";
+$checkboxe7 = "";
+$checkboxe8 = "";
+$checkboxe9 = "";
+$checkboxe10 = "";
+$checkboxe11 = "";
+$checkboxe12 = "";
+$checkboxe13 = "";
+$checkboxe14 = "";
+$checkboxe15 = "";
+
 $sep= " ";
 $day=date('Y-m-d');
 $etatvalidation = "standby";
@@ -26,12 +37,50 @@ if (isset($_POST['dig_si'])) {
 if (isset($_POST['dig_rs'])) {
   $checkboxe5 = "Réseaux sociaux BU";
 }
+if (isset($_POST['cible_e_s'])) {
+  $checkboxe6 = "Small";
+}
+if (isset($_POST['cible_e_m'])) {
+  $checkboxe7 = "Médium";
+}
+if (isset($_POST['cible_e_l'])) {
+  $checkboxe8 = "Large";
+}
+if (isset($_POST['cible_c_1'])) {
+  $checkboxe9 = "General Staffing";
+}
+if (isset($_POST['cible_c_2'])) {
+  $checkboxe10 = "Professional Staffing";
+}
+if (isset($_POST['cible_c_3'])) {
+  $checkboxe11 = "Tous profils";
+}
+if (isset($_POST['cible_i_1'])) {
+  $checkboxe12 = "DRH";
+}
+if (isset($_POST['cible_i_2'])) {
+  $checkboxe13 = "Acheteurs";
+}
+if (isset($_POST['cible_i_3'])) {
+  $checkboxe14 = "Finance";
+}
+if (isset($_POST['cible_i_4'])) {
+  $checkboxe15 = "Autres";
+}
 
   $checkboxes= $checkboxe1.$sep.$checkboxe2.$sep.$checkboxe3;
   $checkboxes2= $checkboxe4.$sep.$checkboxe5;
+  $checkboxes3 = $checkboxe6.$sep.$checkboxe7.$sep.$checkboxe8;
+  $checkboxes4 = $checkboxe9.$sep.$checkboxe10.$sep.$checkboxe11;
+  $checkboxes5 = $checkboxe12.$sep.$checkboxe13.$sep.$checkboxe14.$sep.$checkboxe15;
 
-$req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilote_nom_fiche, pilote_email_fiche, pilote_mobile_fiche, pilote_soc_fiche, prio_strat_fiche, bu_proj_fiche, nom_mem_fiche, contexte_proj_fiche, description_proj_fiche, objectif_proj_fiche, ciblage_ent_fiche, ciblage_cand_fiche, ciblage_int_fiche, benef_proj_fiche, gains_proj_fiche, perim_proj_fiche, date_deploi_fiche, facteur_succ_fiche, port_offre_fiche, lignem_fiche, pedagogie_fiche, rituel_fiche, rituely_fiche, ritueln_fiche, approp_fiche, mode_apropr_fiche, relprof_fiche, diffess_fiche, diffintra_fiche, diffdig_fiche, diffelse_fiche, syntheff_fiche, synthdiff_fiche, synthtime_fiche, synthimp_fiche, synthcrea_fiche, synthmotiv_fiche, validation_fiche)
-VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv, :validation)');
+     $to = 'adouardcamille@hotmail.com';
+     $subject = 'Un nouveau projet a été ajouté';
+     $message = 'Bonjour ! un nouveau projet a été ajouté le '.$day;
+     mail($to, $subject, $message);
+
+$req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilote_nom_fiche, pilote_email_fiche, pilote_mobile_fiche, pilote_soc_fiche, prio_strat_fiche, bu_proj_fiche, nom_mem_fiche, contexte_proj_fiche, description_proj_fiche, objectif_proj_fiche, ciblage_ent_fiche, ciblage_cand_fiche, ciblage_int_fiche, ciblage_cli_text_fiche, benef_proj_fiche, gains_proj_fiche, perim_proj_fiche, date_deploi_fiche, facteur_succ_fiche, port_offre_fiche, lignem_fiche, pedagogie_fiche, rituel_fiche, rituely_fiche, ritueln_fiche, approp_fiche, mode_apropr_fiche, relprof_fiche, diffess_fiche, diffintra_fiche, diffdig_fiche, diffelse_fiche, syntheff_fiche, synthdiff_fiche, synthtime_fiche, synthimp_fiche, synthcrea_fiche, synthmotiv_fiche, validation_fiche)
+VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :cibl_int_text, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv, :validation)');
 $req->execute(array(
     'titre_proj' => $_POST['titre_proj'],
     'date_demande_proj' => $day,
@@ -45,9 +94,10 @@ $req->execute(array(
     'context_proj' => $_POST['contexte_proj'],
     'descri_proj' => $_POST['descri_proj'],
     'obj_proj' => $_POST['obj_proj'],
-    'cibl_ent' => $_POST['cibl_ent'],
-    'cibl_cand' => $_POST['cibl_cand'],
-    'cibl_int' => $_POST['cibl_cli'],
+    'cibl_ent' => $checkboxes3,
+    'cibl_cand' => $checkboxes4,
+    'cibl_int' => $checkboxes5,
+    'cibl_int_text' => $_POST['autrecible'],
     'benef_proj' => $_POST['benef_proj'],
     'gain_proj' => $_POST['gain_proj'],
     'perim_proj' => $_POST['perim_proj'],
