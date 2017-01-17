@@ -100,6 +100,18 @@ div.col-md-6.validate{
 
 /* PROJECT */
 
+  div.container.projects-main div.col-md-9 h1{
+    margin-right: 36%;
+  }
+
+  #testinput{
+    width:30%;
+  }
+
+  strong.undertitle{
+    font-size:23px;
+  }
+
   input{
     padding:10px;
   }
@@ -272,11 +284,11 @@ div.col-md-6.validate{
   }
 
   div.mainotation img{
-    width: 20px;
+    width: 32px;
   }
 
   div.notation img{
-    width:20px;
+    width:32px;
   }
 
   .motivation{

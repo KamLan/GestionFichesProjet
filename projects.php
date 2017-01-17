@@ -67,7 +67,7 @@
                 <div class="col-md-12">
                   <div class="col-md-6">
                     <h3>
-                      Membre codir ou manager
+                      Sponsor
                     </h3>
                   </div>
                   <div class="col-md-6 entity">
@@ -124,7 +124,7 @@
               <textarea name="obj_proj" rows="4 " cols="40" placeholder="Objectif" id="ta3" class="champ"></textarea><br><br>
             </div>
             <div class="col-md-4 pilote">
-              <label for="">Ciblage entreprise :</label> <br>
+              <label for=""><strong class="undertitle"><u>Ciblage entreprise :</u></strong></label> <br>
               <input type="checkbox" name="cible_e_s" value="" id="cible_e_1" class="radiocheck" style="display:none">
               <label for="cible_e_1">
                 <img src="img\checked.png" id="cible_e_1C" alt="" style="display:none"/>
@@ -143,7 +143,7 @@
                 <img src="img\multiply.png" id="cible_e_3C2" alt=""/>
                 Large
               </label> <br>
-              <label for="">Ciblage candidats :</label> <br>
+              <label for=""><strong class="undertitle"><u>Ciblage candidats :</u></strong></label> <br>
               <input type="checkbox" name="cible_c_1" value="" id="cible_c_1" class="radiocheck" style="display:none">
               <label for="cible_c_1">
                 <img src="img\checked.png" id="cible_c_1C" alt="" style="display:none"/>
@@ -162,7 +162,7 @@
                 <img src="img\multiply.png" id="cible_c_3C2" alt=""/>
                 Tous profils
               </label> <br>
-              <label for="">Ciblage interlocuteurs clients :</label> <br>
+              <label for=""><strong class="undertitle"><u>Ciblage interlocuteurs clients :</u></strong></label> <br>
               <input type="checkbox" name="cible_i_1" value="" id="cible_i_1" class="radiocheck" style="display:none">
               <label for="cible_i_1">
                 <img src="img\checked.png" id="cible_i_1C" alt="" style="display:none"/>
@@ -230,13 +230,13 @@
               <h3>
                 Canal de déploiement
               </h3>
-              Ligne managériale <br>
+              <strong class="undertitle"><u>Ligne managériale</u></strong> <br>
               <input type="radio" name="lm" value="oui" class="radiocheck">Oui
               <input type="radio" name="lm" value="non" class="radiocheck">Non <br>
-              Pédagogie en réunion de zone <br>
+              <strong class="undertitle"><u>Pédagogie en réunion de zone</u></strong> <br>
               <input type="radio" name="Peda" value="oui" class="radiocheck">Oui
               <input type="radio" name="Peda" value="non" class="radiocheck">Non <br>
-              Rituel existant pour lancer le projet <br>
+              <strong class="undertitle"><u>Rituel existant pour lancer le projet </u></strong><br>
               <input type="radio" name="Rituel" value="oui" id="affichetext1" class="radiocheck">Oui
               <input type="radio" name="Rituel" value="non" id="affichetext2" class="radiocheck">Non <br>
               <textarea name="R_y_text" rows="4" cols="40" placeholder="Précisez (ex: réunions DZ, calls hebdo, autre, ...)" id="5" class="champ"></textarea> <br>
@@ -246,7 +246,7 @@
               <h3>
                 Professionalisation
               </h3>
-              Appropriation à prévoir <br>
+              <strong class="undertitle"><u>Appropriation à prévoir</u></strong> <br>
               <input type="radio" name="Aprop" value="oui" id="affichetext3" class="radiocheck">Oui
               <input type="radio" name="Aprop" value="préconisé" id="affichetext4" class="radiocheck">Préconisé
               <input type="radio" name="Aprop" value="non" id="cachertext3" class="radiocheck">Non <br><br>
@@ -257,13 +257,13 @@
               <h3>
                 Diffusion des supports
               </h3>
-              Essentiel <br>
+              <strong class="undertitle"><u>Essentiel</u></strong> <br>
               <input type="radio" name="Ess" value="oui" class="radiocheck">Oui
               <input type="radio" name="Ess" value="non" class="radiocheck">Non <br>
-              Intranet BU <br>
+              <strong class="undertitle"><u>Intranet BU</u></strong> <br>
               <input type="radio" name="Intra" value="oui" class="radiocheck">Oui
               <input type="radio" name="Intra" value="non" class="radiocheck">Non <br>
-              Digital <br>
+              <strong class="undertitle"><u>Digital</u></strong> <br>
               <label for="dig1">
                 <img src="img\checked.png" id="dig1C" alt="" style="display:none"/>
                 <img src="img\multiply.png" id="dig1C2" alt=""/>
@@ -295,23 +295,23 @@
               Noter l'effort d'implémentation <br>
               <div class="notationgrade">
                 <label for="radio1" class="labelradio1">
-                  <img id="labelimg1" src="img\level1.png" alt="" />
+                  <img id="labelimg1" src="img\level1.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck1" style="display:none" alt="" />
                 </label>
                 <label for="radio2" class="labelradio2">
-                  <img id="labelimg2" src="img\level2.png" alt="" />
+                  <img id="labelimg2" src="img\level2.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck2" style="display:none" alt="" />
                 </label>
                 <label for="radio3" class="labelradio3">
-                  <img id="labelimg3" src="img\level3.png" alt="" />
+                  <img id="labelimg3" src="img\level3.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck3" style="display:none" alt="" />
                 </label>
                 <label for="radio4" class="labelradio4">
-                  <img id="labelimg4" src="img\level4.png" alt="" />
+                  <img id="labelimg4" src="img\level4.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck4" style="display:none" alt="" />
                 </label>
                 <label for="radio5" class="labelradio5">
-                  <img id="labelimg5" src="img\level5.png" alt="" />
+                  <img id="labelimg5" src="img\level5.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck5" style="display:none" alt="" />
                 </label>
               </div>
@@ -325,23 +325,23 @@
               Noter la différencation vs concurrence <br>
               <div class="notationgrade">
                 <label for="radio6" class="labelradio6">
-                  <img id="labelimg6" src="img\level1.png" alt="" />
+                  <img id="labelimg6" src="img\level1.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck6" style="display:none" alt="" />
                 </label>
                 <label for="radio7" class="labelradio7">
-                  <img id="labelimg7" src="img\level2.png" alt="" />
+                  <img id="labelimg7" src="img\level2.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck7" style="display:none" alt="" />
                 </label>
                 <label for="radio8" class="labelradio8">
-                  <img id="labelimg8" src="img\level3.png" alt="" />
+                  <img id="labelimg8" src="img\level3.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck8" style="display:none" alt="" />
                 </label>
                 <label for="radio9" class="labelradio9">
-                  <img id="labelimg9" src="img\level4.png" alt="" />
+                  <img id="labelimg9" src="img\level4.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck9" style="display:none" alt="" />
                 </label>
                 <label for="radio10" class="labelradio10">
-                  <img id="labelimg10" src="img\level5.png" alt="" />
+                  <img id="labelimg10" src="img\level5.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck10" style="display:none" alt="" />
                 </label>
               </div>
@@ -355,23 +355,23 @@
               Noter le temps nécessaire déploiement <br>
               <div class="notationgrade">
                 <label for="radio11" class="labelradio11">
-                  <img id="labelimg11" src="img\level1.png" alt="" />
+                  <img id="labelimg11" src="img\level1.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck11" style="display:none" alt="" />
                 </label>
                 <label for="radio12" class="labelradio12">
-                  <img id="labelimg12" src="img\level2.png" alt="" />
+                  <img id="labelimg12" src="img\level2.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck12" style="display:none" alt="" />
                 </label>
                 <label for="radio13" class="labelradio13">
-                  <img id="labelimg13" src="img\level3.png" alt="" />
+                  <img id="labelimg13" src="img\level3.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck13" style="display:none" alt="" />
                 </label>
                 <label for="radio14" class="labelradio14">
-                  <img id="labelimg14" src="img\level4.png" alt="" />
+                  <img id="labelimg14" src="img\level4.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck14" style="display:none" alt="" />
                 </label>
                 <label for="radio15" class="labelradio15">
-                  <img id="labelimg15" src="img\level5.png" alt="" />
+                  <img id="labelimg15" src="img\level5.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck15" style="display:none" alt="" />
                 </label>
               </div>
@@ -385,23 +385,23 @@
               Noter la facilité de mesure d'impact <br>
               <div class="notationgrade">
                 <label for="radio16" class="labelradio16">
-                  <img id="labelimg16" src="img\level1.png" alt="" />
+                  <img id="labelimg16" src="img\level1.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck16" style="display:none" alt="" />
                 </label>
                 <label for="radio17" class="labelradio17">
-                  <img id="labelimg17" src="img\level2.png" alt="" />
+                  <img id="labelimg17" src="img\level2.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck17" style="display:none" alt="" />
                 </label>
                 <label for="radio18" class="labelradio18">
-                  <img id="labelimg18" src="img\level3.png" alt="" />
+                  <img id="labelimg18" src="img\level3.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck18" style="display:none" alt="" />
                 </label>
                 <label for="radio18" class="labelradio19">
-                  <img id="labelimg19" src="img\level4.png" alt="" />
+                  <img id="labelimg19" src="img\level4.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck19" style="display:none" alt="" />
                 </label>
                 <label for="radio20" class="labelradio20">
-                  <img id="labelimg20" src="img\level5.png" alt="" />
+                  <img id="labelimg20" src="img\level5.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck20" style="display:none" alt="" />
                 </label>
               </div>
@@ -415,23 +415,23 @@
               Noter la création de valeur / impact business <br>
               <div class="notationgrade">
                 <label for="radio21" class="labelradio21">
-                  <img id="labelimg21" src="img\level1.png" alt="" />
+                  <img id="labelimg21" src="img\level1.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck21" style="display:none" alt="" />
                 </label>
                 <label for="radio22" class="labelradio22">
-                  <img id="labelimg22" src="img\level2.png" alt="" />
+                  <img id="labelimg22" src="img\level2.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck22" style="display:none" alt="" />
                 </label>
                 <label for="radio23" class="labelradio23">
-                  <img id="labelimg23" src="img\level3.png" alt="" />
+                  <img id="labelimg23" src="img\level3.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck23" style="display:none" alt="" />
                 </label>
                 <label for="radio24" class="labelradio24">
-                  <img id="labelimg24" src="img\level4.png" alt="" />
+                  <img id="labelimg24" src="img\level4.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck24" style="display:none" alt="" />
                 </label>
                 <label for="radio25" class="labelradio25">
-                  <img id="labelimg25" src="img\level5.png" alt="" />
+                  <img id="labelimg25" src="img\level5.jpg" alt="" />
                   <img src="img\checked.png" id="labelcheck25" style="display:none" alt="" />
                 </label>
               </div>

@@ -10,15 +10,15 @@ try {
 ?>
 
 <?php
-//$dsn='mysql:host=51.254.113.91;dbname=fichesadecco';
-//$username="root";
-//$password="PxIMUrqLmn89";
-
-//try {
-//  $bdd = new PDO($dsn,$username,$password);
-
-//} catch (Exception $e) {
-//  die('Erreur : '.$e->getMessage());
-//}
+// $dsn='mysql:host=camilleaolcam.mysql.db;dbname=camilleaolcam';
+// $username="camilleaolcam";
+// $password="nB42MHCxbEUZ";
+//
+// try {
+//   $bdd = new PDO($dsn,$username,$password);
+//
+// } catch (Exception $e) {
+//   die('Erreur : '.$e->getMessage());
+// }
 
 ?>
