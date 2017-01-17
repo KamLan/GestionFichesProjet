@@ -53,32 +53,34 @@
             <?php echo $donnees['date_demande_projet'] ?>
           </strong>
         </h2>
-        <div class="col-md-12">
+        <div class="col-md-12 task-pilot">
           <h1>
-            Description pilote
+            Description pilote :
           </h1>
-          <h2>
-            <strong>
-              <?php echo $donnees['pilote_nom_fiche']; ?>
-            </strong>
-          </h2>
-          <h2>
-            <strong>
-              <?php echo $donnees['pilote_email_fiche']; ?>
-            </strong>
-          </h2>
-          <h2>
-            <strong>
-                <?php echo $donnees['pilote_mobile_fiche']; ?>
-            </strong>
-          </h2>
-          <h2>
-            <strong>
-                <?php echo $donnees['pilote_soc_fiche']; ?>
-            </strong>
-          </h2>
+          <div class="task-pilot">
+            <h2>
+              <strong>
+                - <?php echo $donnees['pilote_nom_fiche']; ?>
+              </strong>
+            </h2>
+            <h2>
+              <strong>
+                - <?php echo $donnees['pilote_email_fiche']; ?>
+              </strong>
+            </h2>
+            <h2>
+              <strong>
+                -  <?php echo $donnees['pilote_mobile_fiche']; ?>
+              </strong>
+            </h2>
+            <h2>
+              <strong>
+                -  <?php echo $donnees['pilote_soc_fiche']; ?>
+              </strong>
+            </h2>
+          </div>
         </div>
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
           <h1>
             Priorité stratégique
           </h1>
@@ -469,7 +471,7 @@
                 <?php echo $donnees['synthmotiv_fiche']; ?>
               </strong>
             </h2>
-          </div>
+          </div> -->
         </div>
       </div>
     <?php

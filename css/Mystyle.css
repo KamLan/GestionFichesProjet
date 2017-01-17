@@ -57,7 +57,6 @@ body{
 .container{
   margin-top: 3%;
   width: 100%;
-  background-color: white;
   padding: 0px;
 }
 
@@ -90,7 +89,25 @@ body h3{
 
 /*INDEX */
 
+  div.col-md-6.task{
+    background-color: #fff;
+  }
+
+  div.task-pilot h2{
+    text-align: left;
+    margin-left: 10%;
+  }
+
+  .task-pilot h1{
+    text-align: left;
+    margin-left: 5%;
+  }
+
 /*FICHE*/
+
+div.container.fiche_prez{
+  
+}
 
 div.col-md-6.validate{
   padding-top: 5%;

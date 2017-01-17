@@ -3,7 +3,7 @@
   $fiche = $_GET['ficheid'];
  ?>
 
- <div class="container">
+ <div class="container fiche_prez">
    <div class="col-md-12">
      <h1 class="main-title">
        <strong>
@@ -289,27 +289,27 @@
                 switch ($donnees2['syntheff_fiche']) {
                   case '1':
                 ?>
-                  <img src="img\level1.png" alt="" />
+                  <img src="img\level1.jpg" alt="" />
                 <?php
                     break;
                   case '2':
                 ?>
-                  <img src="img\level2.png" alt="" />
+                  <img src="img\level2.jpg" alt="" />
                 <?php
                     break;
                   case '3':
                 ?>
-                  <img src="img\level3.png" alt="" />
+                  <img src="img\level3.jpg" alt=""jpg
                 <?php
                     break;
                   case '4':
                 ?>
-                  <img src="img\level4.png" alt="" />
+                  <img src="img\level4.jpg" alt="" />
                 <?php
                     break;
                   case '5':
                 ?>
-                  <img src="img\level5.png" alt="" />
+                  <img src="img\level5.jpg" alt="" />
                 <?php
                     break;
                   default:
@@ -325,27 +325,27 @@
                 switch ($donnees2['synthdiff_fiche']) {
                   case '1':
                 ?>
-                  <img src="img\level1.png" alt="" />
+                  <img src="img\level1.jpg" alt="" />
                 <?php
                     break;
                   case '2':
                 ?>
-                  <img src="img\level2.png" alt="" />
+                  <img src="img\level2.jpg" alt="" />
                 <?php
                     break;
                   case '3':
                 ?>
-                  <img src="img\level3.png" alt="" />
+                  <img src="img\level3.jpg" alt="" />
                 <?php
                     break;
                   case '4':
                 ?>
-                  <img src="img\level4.png" alt="" />
+                  <img src="img\level4.jpg" alt="" />
                 <?php
                     break;
                   case '5':
                 ?>
-                  <img src="img\level5.png" alt="" />
+                  <img src="img\level5.jpg" alt="" />
                 <?php
                     break;
                   default:
@@ -361,27 +361,27 @@
                 switch ($donnees2['synthtime_fiche']) {
                   case '1':
                 ?>
-                  <img src="img\level1.png" alt="" />
+                  <img src="img\level1.jpg" alt="" />
                 <?php
                     break;
                   case '2':
                 ?>
-                  <img src="img\level2.png" alt="" />
+                  <img src="img\level2.jpg" alt="" />
                 <?php
                     break;
                   case '3':
                 ?>
-                  <img src="img\level3.png" alt="" />
+                  <img src="img\level3.jpg" alt="" />
                 <?php
                     break;
                   case '4':
                 ?>
-                  <img src="img\level4.png" alt="" />
+                  <img src="img\level4.jpg" alt="" />
                 <?php
                     break;
                   case '5':
                 ?>
-                  <img src="img\level5.png" alt="" />
+                  <img src="img\level5.jpg" alt="" />
                 <?php
                     break;
                   default:
@@ -397,27 +397,27 @@
                 switch ($donnees2['synthimp_fiche']) {
                   case '1':
                 ?>
-                  <img src="img\level1.png" alt="" />
+                  <img src="img\level1.jpg" alt="" />
                 <?php
                     break;
                   case '2':
                 ?>
-                  <img src="img\level2.png" alt="" />
+                  <img src="img\level2.jpg" alt="" />
                 <?php
                     break;
                   case '3':
                 ?>
-                  <img src="img\level3.png" alt="" />
+                  <img src="img\level3.jpg" alt="" />
                 <?php
                     break;
                   case '4':
                 ?>
-                  <img src="img\level4.png" alt="" />
+                  <img src="img\level4.jpg" alt="" />
                 <?php
                     break;
                   case '5':
                 ?>
-                  <img src="img\level5.png" alt="" />
+                  <img src="img\level5.jpg" alt="" />
                 <?php
                     break;
                   default:
@@ -433,27 +433,27 @@
                 switch ($donnees2['synthcrea_fiche']) {
                   case '1':
                 ?>
-                  <img src="img\level1.png" alt="" />
+                  <img src="img\level1.jpg" alt="" />
                 <?php
                     break;
                   case '2':
                 ?>
-                  <img src="img\level2.png" alt="" />
+                  <img src="img\level2.jpg" alt="" />
                 <?php
                     break;
                   case '3':
                 ?>
-                  <img src="img\level3.png" alt="" />
+                  <img src="img\level3.jpg" alt="" />
                 <?php
                     break;
                   case '4':
                 ?>
-                  <img src="img\level4.png" alt="" />
+                  <img src="img\level4.jpg" alt="" />
                 <?php
                     break;
                   case '5':
                 ?>
-                  <img src="img\level5.png" alt="" />
+                  <img src="img\level5.jpg" alt="" />
                 <?php
                     break;
                   default:
