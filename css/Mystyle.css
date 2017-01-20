@@ -89,7 +89,26 @@ body h3{
 
 /*INDEX */
 
-  div.col-md-6.task{
+  div.col-md-4.task{
+    background-color: #fff;
+    padding:0px;
+    margin-top: 5%;
+  }
+
+  .task div.col-md-12{
+    background-color: #333;
+  }
+
+  .task div.col-md-12 h1 strong a{
+    color:#fff;
+  }
+
+  .task div.col-md-12.date-project{
+    background-color: #dedede;
+    color: #fff;
+  }
+
+  div.col-md-12.task-pilot{
     background-color: #fff;
   }
 
@@ -106,7 +125,7 @@ body h3{
 /*FICHE*/
 
 div.container.fiche_prez{
-  
+
 }
 
 div.col-md-6.validate{

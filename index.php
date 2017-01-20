@@ -17,42 +17,46 @@
       while ($donnees = $reponse_taches->fetch())
       {
     ?>
-      <div class="col-md-6 task">
-        <h1>
-          <strong>
-            <a href="fiche.php?ficheid=<?php echo $donnees['id_fiche'] ?>">
-              Projet :
-              <?php echo $donnees['titre_projet'] ?>
-            </a>
-          </strong>
-          <?php
-            switch ($donnees['validation_fiche']) {
-              case 'standby':
-          ?>
-                <img src="img\standby.png" alt="" />
-          <?php
-                break;
-              case 'approved':
-          ?>
-                <img src="img\approved.png" alt="" />
-          <?php
-                break;
-              case 'denied':
-          ?>
-                <img src="img\denied.png" alt="" />
-          <?php
-                break;
-              default:
-                break;
-            }
-           ?>
-        </h1>
-        <h2>
-          <strong>
-            Date Ajout :
-            <?php echo $donnees['date_demande_projet'] ?>
-          </strong>
-        </h2>
+      <div class="col-md-4 task">
+        <div class="col-md-12 ">
+          <h1>
+            <strong>
+              <a href="displayfiche.php?ficheid=<?php echo $donnees['id_fiche'] ?>">
+                Projet :
+                <?php echo $donnees['titre_projet'] ?>
+              </a>
+            </strong>
+            <?php
+              switch ($donnees['validation_fiche']) {
+                case 'standby':
+            ?>
+                  <img src="img\standby.png" alt="" />
+            <?php
+                  break;
+                case 'approved':
+            ?>
+                  <img src="img\approved.png" alt="" />
+            <?php
+                  break;
+                case 'denied':
+            ?>
+                  <img src="img\denied.png" alt="" />
+            <?php
+                  break;
+                default:
+                  break;
+              }
+             ?>
+          </h1>
+        </div>
+        <div class="col-md-12 date-project">
+          <h2>
+            <strong>
+              Date Ajout :
+              <?php echo $donnees['date_demande_projet'] ?>
+            </strong>
+          </h2>
+        </div>
         <div class="col-md-12 task-pilot">
           <h1>
             Description pilote :

@@ -477,6 +477,13 @@
       ?>
 
     <div class="col-md-12">
+      <form class="" action="index.html" method="post">
+        <label for="">Commentaires</label>
+        <textarea name="name" rows="8" cols="40"></textarea>
+      </form>
+    </div>
+
+    <div class="col-md-12">
       <div class="col-md-6 validate">
         <a href="approved.php?ficheid=<?php echo $fiche ?>">Valider le projet</a>
       </div>
