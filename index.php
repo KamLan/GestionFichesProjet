@@ -18,7 +18,7 @@
       {
     ?>
       <div class="col-md-4 task">
-        <div class="col-md-12 ">
+        <div class="col-md-12 titlefiche">
           <h1>
             <strong>
               <a href="displayfiche.php?ficheid=<?php echo $donnees['id_fiche'] ?>">

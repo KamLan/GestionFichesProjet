@@ -93,6 +93,16 @@ body h3{
     background-color: #fff;
     padding:0px;
     margin-top: 5%;
+    margin-left: 1%;
+    border: black solid 5px;
+  }
+
+  div.col-md-4.task div.col-md-12.titlefiche{
+    border-bottom: black solid 5px;
+  }
+
+  div.col-md-4.task div.col-md-12.date-project{
+    border-bottom: black solid 5px;
   }
 
   .task div.col-md-12{
