@@ -187,7 +187,7 @@
                 <img src="img\multiply.png" id="cible_i_4C2" alt=""/>
                 Autres
               </label>
-              <textarea name="autrecible" id="textarea8" rows="8" cols="40" placeholder="Précisez"></textarea>
+              <textarea name="autrecible" id="textarea8" rows="8" cols="40" placeholder="Précisez" class=champ></textarea>
             </div>
             <div class="col-md-4">
               <label for="ta4"><strong>Descriptif qualitatif des bénéfices attendus</strong></label>

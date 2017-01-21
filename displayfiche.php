@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="col-md-12 projects">
-      <form class="mainform" id="formproject" name="formulaire" action="inserttask.php" method="post">
+      <form class="mainform" name="formulaire" action="updateComments.php?id=<?php echo $fiche?>" method="post">
         <div class="col-md-12 centerit">
           <h1>
             <strong style="color:black;">
@@ -52,7 +52,6 @@
               }
              ?>
           </h1>
-          <!-- <input type="text" name="titre_proj" placeholder="Titre du projet" value="" style="margin-bottom:0px; margin-right:0px;"id="testinput" class="champ" > -->
           <h4>
             date demande :
             <strong>
@@ -155,12 +154,6 @@
                   <?php echo $donnees2['objectif_proj_fiche']; ?>
                 </strong>
               </h4>
-              <!-- <label for="ta1"><strong>Pourquoi ce projet? Comment</strong> est-il né?</label>
-              <textarea name="contexte_proj" rows="4" cols="40" placeholder="Contexte" id="ta1" class="champ"></textarea> <br>
-              <label for="ta2"><strong>Décrire l'action du projet.</strong> ce qui doit être fait</label>
-              <textarea name="descri_proj" rows="4" cols="40" placeholder="Description" id=ta2 class="champ"></textarea> <br>
-              <label for="ta3"><strong>Indiquer les objectifs visés.</strong> Quoi, combien...</label>
-              <textarea name="obj_proj" rows="4 " cols="40" placeholder="Objectif" id="ta3" class="champ"></textarea><br><br> -->
             </div>
             <div class="col-md-12 pilote">
               <h3>
@@ -533,17 +526,27 @@
           </div> <br>
         </div>
         <div class="col-md-12 part5">
-          <!-- <input type="button" name="name" value="Valider" class="submit" onclick="Verif_form(this.form)"> -->
           <div class="col-md-12">
-            <div class="col-md-4 validate">
-              <a href="approved.php?ficheid=<?php echo $fiche ?>">Valider le projet</a>
+            <h3>
+              Commentaires du Comité :
+            </h3>
+            <h4 style="text-align:center;">
+              <strong>
+                <?php echo $donnees2['commentaire_fiche']; ?>
+              </strong>
+            </h4>
+          </div>
+          <div class="col-md-4" style="margin-left:33%; margin-top:10%;">
+            <label for="com-proj-fiche">Ajout de commentaire</label> <br>
+            <textarea name="comm_proj" rows="8" cols="40" id="com-proj-fiche"></textarea>
+            <input type="submit" class='submit' name="name" value="Ajout du commentaire">
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-6 validate">
+              <a href="ProjectTransitionState.php?ficheid=<?php echo $fiche ?>&amp;etat=approved">Valider le projet</a>
             </div>
-            <div class="col-md-4">
-              <label for="com-projfiche">Commentaires du Comité :</label>
-              <textarea name="comm-proj" rows="8" cols="40" id="com-proj-fiche"></textarea>
-            </div>
-            <div class="col-md-4 validate">
-              <a href="denied.php?ficheid=<?php echo $fiche ?>">Rejeter le projet</a>
+            <div class="col-md-6 validate">
+              <a href="ProjectTransitionState.php?ficheid=<?php echo $fiche ?>&amp;etat=denied">Rejeter le projet</a>
             </div>
           </div>
         </div>
