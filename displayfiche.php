@@ -131,7 +131,7 @@
               <img src="img/close.png" alt="" id="cache2" />
             </div>
           </h2>
-          <div class="col-md-12 blockform" id="2" style="background-color:#ececec">
+          <div class="col-md-12 blockform centerit" id="2" style="background-color:#ececec">
             <div class="col-md-12">
               <h3>
                 Description
@@ -214,7 +214,7 @@
               <img src="img/close.png" alt="" id="cache3" />
             </div>
           </h2>
-          <div class="col-md-12 blockform" id="3" style="background-color:#f5f5f5">
+          <div class="col-md-12 blockform centerit" id="3" style="background-color:#f5f5f5">
             <div class="col-md-12 pilote">
               <h4>
                 <u>Date envisagée de mise à disposition</u>
@@ -322,7 +322,7 @@
               <img src="img/close.png" alt="" id="cache4" />
             </div>
           </h2>
-          <div class="col-md-12 blockform" id="4" style="background-color:#fdfdfd">
+          <div class="col-md-12 blockform centerit" id="4" style="background-color:#fdfdfd">
             <div class="col-md-2 mainotation">
               Note de l'effort d'implémentation <br>
               <div class="notationgrade">
@@ -539,7 +539,7 @@
           <div class="col-md-4" style="margin-left:33%; margin-top:10%;">
             <label for="com-proj-fiche">Ajout de commentaire</label> <br>
             <textarea name="comm_proj" rows="8" cols="40" id="com-proj-fiche"></textarea>
-            <input type="submit" class='submit' name="name" value="Ajout du commentaire">
+            <input type="submit" name="name" value="Ajout du commentaire" style="width:250px;">
           </div>
           <div class="col-md-12">
             <div class="col-md-6 validate">
