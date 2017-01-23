@@ -74,10 +74,80 @@ if (isset($_POST['cible_i_4'])) {
   $checkboxes4 = $checkboxe9.$sep.$checkboxe10.$sep.$checkboxe11;
   $checkboxes5 = $checkboxe12.$sep.$checkboxe13.$sep.$checkboxe14.$sep.$checkboxe15;
 
+//mail pour le comité des offres
+
      $to = 'adouardcamille@hotmail.com';
      $subject = 'Un nouveau projet est disponible!';
-     $message = 'Bonjour ! un nouveau projet a ete soumis le '.$day." ";
+    //  $message = 'Bonjour ! un nouveau projet a ete soumis le '.$day." ";
+
+
+     $message = "
+      <html>
+        <head>
+          <title>Un nouveau projet est disponible !</title>
+        </head>
+        <body>
+          <p>
+            Ce projet a été ajouté le ".$day." <br>
+            Voici les informations de la personne ayant effectué l'ajout:
+          </p>
+          <table>
+            <tr>
+            <th>
+              ".$_POST['titre_proj']."
+            </th>
+              <th>
+                ".$_POST['nom_pil']."
+              </th>
+              <th>
+                ".$_POST['email_pil']."
+              </th>
+              <th>
+                ".$_POST['tel_pil']."
+              </th>
+            </tr>
+          </table>
+        </body>
+      </html>
+     "
+
      mail($to, $subject, $message);
+
+//mail pour la personne ayant ajouté le projet
+
+    $to2 = ".$_POST['email_pil'].";
+    $subject2 = 'Nous avons bien reçu votre ptojet !';
+    $message2 = "
+     <html>
+       <head>
+         <title>Un nouveau projet est disponible !</title>
+       </head>
+       <body>
+         <p>
+           Ce projet a été ajouté le ".$day." <br>
+           Voici les informations de la personne ayant effectué l'ajout:
+         </p>
+         <table>
+           <tr>
+           <th>
+             ".$_POST['titre_proj']."
+           </th>
+             <th>
+               ".$_POST['nom_pil']."
+             </th>
+             <th>
+               ".$_POST['email_pil']."
+             </th>
+             <th>
+               ".$_POST['tel_pil']."
+             </th>
+           </tr>
+         </table>
+       </body>
+     </html>
+    "
+
+    mail($to2, $subject2, $message2);
 
 $req = $bdd->prepare('INSERT INTO fiches(titre_projet, date_demande_projet, pilote_nom_fiche, pilote_email_fiche, pilote_mobile_fiche, pilote_soc_fiche, prio_strat_fiche, bu_proj_fiche, nom_mem_fiche, contexte_proj_fiche, description_proj_fiche, objectif_proj_fiche, ciblage_ent_fiche, ciblage_cand_fiche, ciblage_int_fiche, ciblage_cli_text_fiche, benef_proj_fiche, gains_proj_fiche, perim_proj_fiche, date_deploi_fiche, facteur_succ_fiche, port_offre_fiche, lignem_fiche, pedagogie_fiche, rituel_fiche, rituely_fiche, ritueln_fiche, approp_fiche, mode_apropr_fiche, relprof_fiche, diffess_fiche, diffintra_fiche, diffdig_fiche, diffelse_fiche, syntheff_fiche, synthdiff_fiche, synthtime_fiche, synthimp_fiche, synthcrea_fiche, synthmotiv_fiche, validation_fiche, commentaire_fiche)
 VALUES(:titre_proj, :date_demande_proj, :nom, :email, :tel, :soc, :prio_strat, :bu_proj, :nom_mem_fiche, :context_proj, :descri_proj, :obj_proj, :cibl_ent, :cibl_cand, :cibl_int, :cibl_int_text, :benef_proj, :gain_proj, :perim_proj, :date_deploi, :facteur_succ, :port_offre, :lignem, :pedagogie, :rituel, :rituely, :ritueln, :approp, :mode_apropr, :relprof, :diffess, :diffintra, :diffdig, :diffelse, :syntheff, :synthdiff, :synthtime, :synthimp, :synthcrea, :synthmotiv, :validation, :comm_proj)');
