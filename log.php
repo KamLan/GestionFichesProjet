@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <?php
-  include 'bdd.php';
   session_start();
-  if (!isset($_SESSION['logged'])) {
-    header('location:log.php');
-  }
+  include 'bdd.php';
  ?>
 <html>
   <head>
@@ -34,21 +31,15 @@
             <?php
               if (isset($_SESSION['logged'])) {
             ?>
-            <a class="navbar-brand" href="projects.php">
+            <a class="navbar-brand" href="index.php">
               <i class="fa fa-terminal fa-lg" aria-hidden="true"></i>
             </a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <?php
-                if (isset($_SESSION['superlogged'])) {
-              ?>
               <li>
                 <a class="second-color" href="index.php">Projets</a>
               </li>
-              <?php
-                }
-               ?>
               <li>
                 <a class="second-color" href="projects.php">Ajout Fiche</a>
               </li>
@@ -60,3 +51,19 @@
         </div>
       </nav>
     </header>
+
+
+ <div class="container">
+   <div class="col-md-12 formlog">
+     <h1 class="main-title">
+       <strong>
+         Espace de connexion pour administrateur
+       </strong>
+     </h1>
+     <form class="" action="check.php" method="post">
+       <input type="text" name="username" value="" placeholder="Identifiant"> <br>
+       <input type="password" name="password" value="" placeholder="Mot de passe"> <br>
+       <input type="submit" name="name" value="Valider">
+     </form>
+   </div>
+ </div>

@@ -87,6 +87,17 @@ body h3{
   font-family: "bebas neue";
 }
 
+/*LOG*/
+
+  div.formlog{
+    text-align: center;
+  }
+
+  div.formlog form input{
+    width:50%;
+    text-align: center;
+  }
+
 /*INDEX */
 
   div.col-md-4.task{
