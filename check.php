@@ -2,10 +2,7 @@
   include 'bdd.php';
 
   $reponse_log = $bdd->query('SELECT * FROM Admin');
-  // $reponse_username = $bdd->query('SELECT login_user FROM Admin');
-  // $reponse_password = $bdd->query('SELECT password_user FROM Admin');
-  // $reponse_super = $bdd->query('SELECT super_user FROM Admin');
-  // $donnees = $reponse_username->fetch() AND $donnees2 = $reponse_password->fetch()
+
   while ($donnees = $reponse_log->fetch())
   {
     if (isset($_POST['username']) && isset($_POST['password'])) {

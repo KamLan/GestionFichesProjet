@@ -8,16 +8,6 @@ $headers = "";
 $message = "";
 $commentaires = "";
 $lastcomment = $_POST['comm_proj'];
-      // $to3 = 'adouardcamille@hotmail.com';
-      // $subject3 = 'Hello';
-      // $message3 = '<h1> Hello ma friend ! </h1>';
-      // $message3 .= '<p> This is a <u>test message</u></p>';
-      // $message3 .= '<p> If you receive me you did succeed !!<p>';
-      // $headers3 = 'Content-Type: text/html; charset=\"iso-8859\"';
-      // $headers .= 'From: "adouardcamille.com"';
-      // $headers .= 'Reply-To: adouardcamille@hotmail.com';
-      //
-      // mail($to3, $subject3, $message3, $headers3);
 
     $req_ap = $bdd->query('SELECT commentaire_fiche FROM fiches WHERE id_fiche="'.$ficheid.'"');
     while ($donnees3 = $req_ap->fetch())

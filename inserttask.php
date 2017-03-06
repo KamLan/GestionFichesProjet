@@ -1,4 +1,5 @@
 <?php
+
 include 'bdd.php';
 
 /* Gestion checkboxes */
@@ -84,7 +85,7 @@ if (isset($_POST['cible_i_4'])) {
     $titre_proj=$_POST['titre_proj'];
 
 
-     $to = 'adouardcamille@hotmail.com';
+     $to = 'adouardcamille@hotmail.com, veronique.milsant@adeccogroup.com, bruno.moyne@adeccogroup.com';
      $subject = 'Un nouveau projet est disponible!';
      //$headers = "From: adouardcamille@hotmail.com";
      $headers = 'Content-Type: text/html; charset=\"iso-8859-1\"';
